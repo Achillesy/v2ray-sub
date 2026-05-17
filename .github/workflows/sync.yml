@@ -15,4 +15,4 @@ jobs:
           echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H -t ed25519,rsa ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
-          rsync -z sub.txt ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/home/${{ secrets.DEPLOY_USER }}/Workspace/Python/GithubNode/output/codex_ubuntu_sub.txt
+          rsync -z sub.txt ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/v2ray/codex_ubuntu_sub.txt
